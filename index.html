@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthikeyan Selvamani — AI &amp; ML Engineer</title>
+<meta name="description" content="Portfolio of Karthikeyan Selvamani — AI &amp; ML Engineer specializing in Computer Vision, Robotics, IoT and Generative AI. Published researcher, CSEA General Secretary, Annamalai University.">
+<meta name="theme-color" content="#06070d">
+<meta property="og:title" content="Karthikeyan Selvamani — AI & ML Engineer">
+<meta property="og:description" content="Computer Vision, Robotics, IoT & Generative AI. Published researcher — ICICEA'26.">
+<meta property="og:image" content="assets/karthikeyan-headshot.jpeg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+<link rel="icon" type="image/png" href="assets/ks-logo.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-mono">KS.init()</div>
+    <div class="loader-bar"><span id="loaderProgress"></span></div>
+    <div class="loader-status" id="loaderStatus">loading assets…</div>
+  </div>
+</div>
+
+<!-- ============ CURSOR GLOW ============ -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress"><span id="scrollProgressBar"></span></div>
+
+<!-- ============ AURORA BACKDROP (global) ============ -->
+<div class="aurora-field" aria-hidden="true">
+  <span class="blob blob-a"></span>
+  <span class="blob blob-b"></span>
+  <span class="blob blob-c"></span>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="brand">
+      <img src="assets/ks-logo.png" alt="KS logo" class="brand-mark-img">
+      <span class="brand-name">Karthikeyan<em>.dev</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link"><span>01</span>About</a>
+      <a href="#stack" class="nav-link"><span>02</span>Stack</a>
+      <a href="#skills" class="nav-link"><span>03</span>Skills</a>
+      <a href="#timeline" class="nav-link"><span>04</span>Journey</a>
+      <a href="#projects" class="nav-link"><span>05</span>Projects</a>
+      <a href="#research" class="nav-link"><span>06</span>Research</a>
+      <a href="#gallery" class="nav-link"><span>07</span>Gallery</a>
+      <a href="#contact" class="nav-link"><span>08</span>Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="assets/Karthikeyan_Selvamani_Resume.pdf" target="_blank" class="btn btn-ghost btn-sm magnetic">
+        <i class="fa-solid fa-file-arrow-down"></i><span>Resume</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas id="particles-js"></canvas>
+
+  <div class="hero-inner">
+    <div class="hero-copy" data-aos="fade-up">
+      <div class="eyebrow"><span class="dot-pulse"></span>AI / ML ENGINEER — ANNAMALAI UNIVERSITY, TN</div>
+
+      <h1 class="hero-title">
+        Hi, I build things<br> with <span class="grad-text">Artificial&nbsp;Intelligence</span>
+      </h1>
+
+      <div class="hero-typed-row">
+        <span class="typed-prefix">&gt;&nbsp;</span><span id="typed"></span><span class="typed-cursor">|</span>
+      </div>
+
+      <p class="hero-desc">
+        I'm Karthikeyan Selvamani — an aspiring AI &amp; ML engineer who turns research into
+        working hardware. I build autonomous rovers that see structural cracks, RAG pipelines that
+        read the law, and dashboards that forecast the future. Published researcher at
+        <strong>ICICEA'26</strong>. Currently leading 80+ students as General Secretary of CSEA,
+        Annamalai University.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary magnetic ripple">
+          <i class="fa-solid fa-rocket"></i><span>View Projects</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic ripple">
+          <i class="fa-regular fa-paper-plane"></i><span>Get in Touch</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num" data-count="4">0</span><span class="hstat-label">Major Projects</span></div>
+        <div class="hstat"><span class="hstat-num" data-count="1">0</span><span class="hstat-label">Published Paper</span></div>
+        <div class="hstat"><span class="hstat-num" data-count="12">0</span><span class="hstat-label">Certifications</span></div>
+        <div class="hstat"><span class="hstat-num" data-count="80">0</span><span class="hstat-label">Team Members Led</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+      <div class="orb-stage">
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-3"></div>
+        <div class="ai-orb">
+          <div class="orb-core"></div>
+          <div class="orb-scan"></div>
+          <span class="orb-tag t1">YOLOv8-seg</span>
+          <span class="orb-tag t2">PyTorch</span>
+          <span class="orb-tag t3">RAG</span>
+          <span class="orb-tag t4">ESP32-CAM</span>
+        </div>
+
+        <div class="chat-preview">
+          <div class="chat-preview-head">
+            <span class="chat-dot"></span> BuildScan Rover · live feed
+          </div>
+          <div class="chat-line"><i class="fa-solid fa-magnifying-glass"></i> scanning surface…</div>
+          <div class="chat-line success"><i class="fa-solid fa-check"></i> crack detected · conf 0.94</div>
+          <div class="chat-line"><i class="fa-solid fa-file-lines"></i> generating inspection report</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span>scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">01 / About</span>
+      <h2 class="section-title">The engineer behind the code</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card glass" data-aos="fade-right">
+        <div class="avatar-photo">
+          <img src="assets/karthikeyan-headshot.jpeg" alt="Karthikeyan Selvamani">
+        </div>
+        <h3>Karthikeyan Selvamani</h3>
+        <p class="about-role">AI &amp; ML Engineer · Robotics · Computer Vision</p>
+        <ul class="about-facts">
+          <li><i class="fa-solid fa-location-dot"></i> Chidambaram, Tamil Nadu, India</li>
+          <li><img src="assets/annamalai-university-logo.png" alt="Annamalai University" class="fact-crest"> B.E. CSE (AI &amp; ML), Annamalai University</li>
+          <li><i class="fa-solid fa-envelope"></i> karthikeyanofficial46@gmail.com</li>
+          <li><i class="fa-solid fa-phone"></i> +91 80157 67241</li>
+        </ul>
+        <div class="about-socials">
+          <a href="https://www.linkedin.com/in/karthikeyan-selvamani" target="_blank" class="social-btn magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/karthikeyan-aihub" target="_blank" class="social-btn magnetic" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://x.com/Karthi_AIML" target="_blank" class="social-btn magnetic" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="about-text" data-aos="fade-left">
+        <p>
+          I'm a graduate of Computer Science and Engineering (AI &amp; ML) at Annamalai University with a habit
+          of turning coursework into hardware. My final-year project, <strong>BuildScan Rover</strong>,
+          fuses robotics, IoT, computer vision and deep learning into an autonomous inspection robot —
+          the work was accepted and published at <strong>ICICEA'26</strong> in April 2026.
+        </p>
+        <p>
+          Outside the lab, I lead as <strong>General Secretary of CSEA</strong> at the Department of
+          Computer Science &amp; Engineering, coordinating 80+ office bearers across technical symposiums,
+          AI summits and department-wide events. I've also volunteered to build a free academic
+          utility platform used by students across 13 departments, and interned on generative AI systems
+          at Live Stream Technologies, Coimbatore.
+        </p>
+        <p>
+          I care about shipping things that work end-to-end — from a YOLO model running on an
+          NVIDIA RTX 3050, to the ESP32-CAM streaming its feed, to the PDF report that lands in
+          someone's inbox. Currently exploring LLM fine-tuning, agentic AI and MLOps.
+        </p>
+
+        <div class="about-counters">
+          <div class="counter-card">
+            <span class="counter-num" data-count="4">0</span><span class="counter-plus">+</span>
+            <span class="counter-label">Projects Shipped</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" data-count="12">0</span><span class="counter-plus">+</span>
+            <span class="counter-label">Certifications</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" data-count="2400">0</span><span class="counter-plus">+</span>
+            <span class="counter-label">Course Records Mapped</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" data-count="3">0</span>
+            <span class="counter-label">Years in Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI TECHNOLOGIES / STACK ============ -->
+<section class="section section-alt" id="stack">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">02 / Stack</span>
+      <h2 class="section-title">AI technologies I build with</h2>
+      <p class="section-sub">From pixel to prediction — the tools behind every project below.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="tech-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>Computer Vision</h3>
+        <p>Real-time detection &amp; segmentation for physical-world inspection systems.</p>
+        <div class="tech-chips">
+          <span>OpenCV</span><span>YOLOv8 / Ultralytics</span><span>CUDA · cuDNN</span>
+        </div>
+      </div>
+      <div class="tech-card glass" data-aos="fade-up" data-aos-delay="80">
+        <div class="tech-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>Deep Learning</h3>
+        <p>Model training, fine-tuning and evaluation for vision and language tasks.</p>
+        <div class="tech-chips">
+          <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span>
+        </div>
+      </div>
+      <div class="tech-card glass" data-aos="fade-up" data-aos-delay="160">
+        <div class="tech-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>Generative AI</h3>
+        <p>RAG pipelines, LLM apps and generative architectures grounded in real data.</p>
+        <div class="tech-chips">
+          <span>LangChain</span><span>Ollama</span><span>GANs · VAEs · Transformers</span>
+        </div>
+      </div>
+      <div class="tech-card glass" data-aos="fade-up" data-aos-delay="240">
+        <div class="tech-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h3>Robotics &amp; IoT</h3>
+        <p>Embedded firmware and sensor fusion bridging hardware and intelligence.</p>
+        <div class="tech-chips">
+          <span>Arduino</span><span>ESP32-CAM</span><span>Raspberry Pi</span>
+        </div>
+      </div>
+      <div class="tech-card glass" data-aos="fade-up" data-aos-delay="320">
+        <div class="tech-icon"><i class="fa-solid fa-cloud"></i></div>
+        <h3>Cloud &amp; Deployment</h3>
+        <p>Shipping models and apps to production infrastructure.</p>
+        <div class="tech-chips">
+          <span>AWS</span><span>Oracle Cloud</span><span>Docker</span>
+        </div>
+      </div>
+      <div class="tech-card glass" data-aos="fade-up" data-aos-delay="400">
+        <div class="tech-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Data &amp; Analytics</h3>
+        <p>Wrangling, forecasting and visualizing data that drives decisions.</p>
+        <div class="tech-chips">
+          <span>Pandas · NumPy</span><span>Prophet</span><span>Power BI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">03 / Skills</span>
+      <h2 class="section-title">Core competencies</h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skills-col" data-aos="fade-up">
+        <h4>Languages</h4>
+        <div class="skill-bar"><div class="skill-top"><span>Python</span><span>92%</span></div><div class="bar-track"><div class="bar-fill" data-width="92"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>JavaScript</span><span>75%</span></div><div class="bar-track"><div class="bar-fill" data-width="75"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>C / C++</span><span>72%</span></div><div class="bar-track"><div class="bar-fill" data-width="72"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>HTML / CSS</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-width="85"></div></div></div>
+      </div>
+
+      <div class="skills-col" data-aos="fade-up" data-aos-delay="100">
+        <h4>AI &amp; ML</h4>
+        <div class="skill-bar"><div class="skill-top"><span>PyTorch</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" data-width="88"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>TensorFlow</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>OpenCV</span><span>86%</span></div><div class="bar-track"><div class="bar-fill" data-width="86"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>LangChain</span><span>78%</span></div><div class="bar-track"><div class="bar-fill" data-width="78"></div></div></div>
+      </div>
+
+      <div class="skills-col" data-aos="fade-up" data-aos-delay="200">
+        <h4>Cloud &amp; Tools</h4>
+        <div class="skill-bar"><div class="skill-top"><span>Git / GitHub</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>AWS</span><span>76%</span></div><div class="bar-track"><div class="bar-fill" data-width="76"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>Flask / Streamlit</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+        <div class="skill-bar"><div class="skill-top"><span>Docker</span><span>68%</span></div><div class="bar-track"><div class="bar-fill" data-width="68"></div></div></div>
+      </div>
+    </div>
+
+    <div class="chip-cloud" data-aos="fade-up" data-aos-delay="250">
+      <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span>
+      <span class="chip">OpenCV</span><span class="chip">YOLOv8</span><span class="chip">LangChain</span>
+      <span class="chip">Ollama</span><span class="chip">AWS</span><span class="chip">Oracle Cloud</span>
+      <span class="chip">Docker</span><span class="chip">Streamlit</span><span class="chip">Flask</span>
+      <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Power BI</span>
+      <span class="chip">Arduino</span><span class="chip">ESP32-CAM</span><span class="chip">CUDA / cuDNN</span>
+      <span class="chip">Git</span><span class="chip">JavaScript</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section section-alt" id="timeline">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">04 / Journey</span>
+      <h2 class="section-title">Education, internships &amp; research</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Jul 2022</span>
+          <h3>B.E. — CSE (AI &amp; ML) begins</h3>
+          <p>Enrolled at Annamalai University, Tamil Nadu. HDCA Diploma completed the same year at TCES I.T. Education, First Class.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Jul 2023</span>
+          <h3>Fellow, NxtWave CCBP 4.0 Academy</h3>
+          <p>Began an ongoing fellowship exploring full-stack development and Industry 4.0 technologies.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Apr 2024</span>
+          <h3>Web Development Internship — Techplement</h3>
+          <p>Built and deployed responsive, cross-browser websites using HTML, CSS, JavaScript and GitHub Pages, remotely.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Aug 2025</span>
+          <h3>General Secretary — CSEA</h3>
+          <p>Took charge of the Computer Science Engineering Association for AY 2025–26, leading 80+ office bearers across technical and cultural events.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Jun 2025</span>
+          <h3>AI/Generative AI Internship — Live Stream Technologies</h3>
+          <p>Built GANs, VAEs and Transformer-based models for image synthesis, text generation and chatbot applications in Coimbatore.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Feb 2026</span>
+          <h3>AI for Atmanirbhar Bharat &amp; Vande Mataram 150 series</h3>
+          <p>Organized and coordinated multi-day AICTE-recognized student engagement summits, symposiums and cultural events as General Secretary.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">Apr 2026</span>
+          <h3>Published — ICICEA'26</h3>
+          <p>"BuildScan Rover: AI-Based Autonomous Robot for Indoor Structural Health Inspection" accepted and published, ISBN 978-93-5717-038-3.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-up">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <span class="tl-date">2026</span>
+          <h3>TANCET PG &amp; Graduation</h3>
+          <p>Scored 81.254 percentile in TANCET PG 2026. Set to graduate with First Class, CGPA 7.09.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">05 / Projects</span>
+      <h2 class="section-title">Featured projects</h2>
+      <p class="section-sub">Four systems, four different problems — all shipped end-to-end.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card tilt glass" data-aos="fade-up">
+        <div class="project-media project-media-photo">
+          <img src="assets/buildscan-rover.png" alt="BuildScan Rover hardware">
+          <div class="project-tag">Published · ICICEA'26</div>
+        </div>
+        <div class="project-body">
+          <h3>BuildScan Rover</h3>
+          <p>Autonomous &amp; Bluetooth-controlled robot that inspects structural surfaces in real time — ESP32-CAM streaming into a YOLOv8n-seg crack-segmentation pipeline, with severity scoring and auto-generated PDF inspection reports.</p>
+          <div class="project-tech">
+            <span>Arduino</span><span>ESP32-CAM</span><span>PyTorch</span><span>YOLOv8-seg</span><span>Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/karthikeyan-aihub" target="_blank" class="btn btn-ghost btn-sm magnetic"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://lnkd.in/gyt5ipqB" target="_blank" class="btn btn-primary btn-sm magnetic"><i class="fa-solid fa-book-open"></i> Publication</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-media project-media-photo">
+          <img src="assets/lexai-homepage.png" alt="LexAI homepage screenshot">
+          <div class="project-tag">RAG · LLM</div>
+        </div>
+        <div class="project-body">
+          <h3>LexAI</h3>
+          <p>Legal &amp; cyber-law intelligence platform. A Retrieval-Augmented Generation pipeline ingests statutes and case material, then answers legal queries grounded in the retrieved source — running entirely on local LLMs via Ollama.</p>
+          <div class="project-tech">
+            <span>LangChain</span><span>Ollama</span><span>Flask</span><span>Vector Search</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/karthikeyan-aihub" target="_blank" class="btn btn-ghost btn-sm magnetic"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-media project-media-photo">
+          <img src="assets/result-awareness-system.png" alt="Result Awareness System homepage screenshot">
+          <div class="project-tag">2,400+ course records</div>
+        </div>
+        <div class="project-body">
+          <h3>Result Awareness System</h3>
+          <p>A CGPA/OGPA calculator turned academic support platform for FEAT, covering all 13 departments and 8 semesters — semester planning, classification prediction and PDF report downloads, built solo in one sleepless night.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Streamlit</span><span>Pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="https://lnkd.in/g9PMBuF6" target="_blank" class="btn btn-primary btn-sm magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card tilt glass" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-media project-media-photo">
+          <img src="assets/covid-dashboard.png" alt="COVID-19 AI Forecast Dashboard screenshot">
+          <div class="project-tag">Forecasting</div>
+        </div>
+        <div class="project-body">
+          <h3>COVID-19 Forecast Analytics</h3>
+          <p>An interactive dashboard analyzing global pandemic data — 30-day case forecasting with Prophet, growth-rate tracking, and an animated global spread visualization.</p>
+          <div class="project-tech">
+            <span>Prophet</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://lnkd.in/gyuPgwNx" target="_blank" class="btn btn-ghost btn-sm magnetic"><i class="fa-brands fa-github"></i> Code</a>
+            <a href="https://covid-forecast-dashboard.streamlit.app/" target="_blank" class="btn btn-primary btn-sm magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Dashboard</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEARCH & LEADERSHIP ============ -->
+<section class="section section-alt" id="research">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">06 / Research &amp; Leadership</span>
+      <h2 class="section-title">Publications, honors &amp; impact</h2>
+    </div>
+
+    <div class="research-card glass" data-aos="fade-up">
+      <div class="research-badge"><i class="fa-solid fa-book"></i></div>
+      <div class="research-content">
+        <h3>BuildScan Rover: AI-Based Autonomous Robot for Indoor Structural Health Inspection</h3>
+        <p>International Conference on Intelligent Computing and Explainable AI (ICICEA'26) · A.V.C. College of Engineering, Mannampandal · April 2026</p>
+        <p class="research-meta">ISBN 978-93-5717-038-3 · Authors: Karthikeyan S, Vasanthakumar A, Yohendra S, Anandhan V, Ruthran S, Dr. P. Sudhakar (Guide)</p>
+        <a href="https://lnkd.in/gyt5ipqB" target="_blank" class="btn btn-ghost btn-sm magnetic">View publication details <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="stats-band" data-aos="fade-up">
+      <div class="stat-block"><span class="counter-num" data-count="81">0</span><span class="counter-suffix">.25</span><span class="stat-block-label">TANCET PG Percentile</span></div>
+      <div class="stat-block"><span class="counter-num" data-count="12">0</span><span class="counter-plus">+</span><span class="stat-block-label">Certifications Earned</span></div>
+      <div class="stat-block"><span class="counter-num" data-count="80">0</span><span class="counter-plus">+</span><span class="stat-block-label">Office Bearers Led</span></div>
+      <div class="stat-block"><span class="counter-num" data-count="18">0</span><span class="stat-block-label">Events Run — COMPSEM'26</span></div>
+    </div>
+
+    <div class="badge-grid" data-aos="fade-up">
+      <div class="badge-card"><i class="fa-solid fa-award"></i><h4>AWS Cloud Deployment</h4><span>NxtWave CCBP 4.0</span></div>
+      <div class="badge-card"><img src="assets/agentblazer-badge.png" alt="Agentblazer Champion badge" class="badge-img"><h4>Agentblazer Champion</h4><span>Salesforce Trailhead</span></div>
+      <div class="badge-card"><i class="fa-solid fa-users-line"></i><h4>Social Networks</h4><span>NPTEL · IIT Madras</span></div>
+      <div class="badge-card"><i class="fa-solid fa-microchip"></i><h4>Applied Accelerated AI</h4><span>NPTEL · IIT Palakkad</span></div>
+      <div class="badge-card"><i class="fa-solid fa-medal"></i><h4>2nd Place — Zonal Orals</h4><span>IEEE CS Madras ICT Quiz</span></div>
+      <div class="badge-card"><i class="fa-solid fa-diagram-project"></i><h4>MCP Mega Workshop</h4><span>NxtWave CCBP 4.0</span></div>
+      <div class="badge-card"><i class="fa-solid fa-atom"></i><h4>Quantum Computing FDP</h4><span>SRMIST × IIT Roorkee</span></div>
+      <div class="badge-card"><i class="fa-solid fa-link"></i><h4>Blockchain-Assisted CPS</h4><span>Shiv Nadar University</span></div>
+    </div>
+
+    <div class="leadership-row" data-aos="fade-up">
+      <div class="lead-chip"><i class="fa-solid fa-bullhorn"></i> General Secretary, CSEA</div>
+      <div class="lead-chip"><i class="fa-solid fa-calendar-check"></i> COMPSEM'26 Organizer</div>
+      <div class="lead-chip"><i class="fa-solid fa-flag"></i> AI for Atmanirbhar Bharat 2026</div>
+      <div class="lead-chip"><i class="fa-solid fa-seedling"></i> Swachhata Pakhwada 2025</div>
+      <div class="lead-chip"><i class="fa-solid fa-futbol"></i> NETSPORTS'25 Coordinator</div>
+      <div class="lead-chip"><i class="fa-solid fa-chalkboard-user"></i> 150 Yrs Vande Mataram Lead</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section section-alt" id="gallery">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">Gallery</span>
+      <h2 class="section-title">Snapshots &amp; certificates</h2>
+      <p class="section-sub">A few frames from the journey — click any image to expand.</p>
+    </div>
+
+    <div class="snap-grid" data-aos="fade-up">
+      <div class="snap-item lightbox-trigger span-2">
+        <img src="assets/karthikeyan-fullbody.jpg" data-full="assets/karthikeyan-fullbody.jpg" alt="Karthikeyan Selvamani, formal outdoor portrait">
+      </div>
+      <div class="snap-item lightbox-trigger">
+        <img src="assets/karthikeyan-portrait-stylized.png" data-full="assets/karthikeyan-portrait-stylized.png" alt="Karthikeyan Selvamani, portrait">
+      </div>
+      <div class="snap-item lightbox-trigger cert">
+        <img src="assets/certs-tech.jpg" data-full="assets/certs-tech.jpg" alt="Certificates wall — technical certifications">
+        <span class="snap-caption">Certifications wall</span>
+      </div>
+      <div class="snap-item lightbox-trigger cert span-2">
+        <img src="assets/certs-general.jpg" data-full="assets/certs-general.jpg" alt="Certificates and medals collection">
+        <span class="snap-caption">Certificates &amp; medals</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX OVERLAY ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-eyebrow">07 / Contact</span>
+      <h2 class="section-title">Let's build something</h2>
+      <p class="section-sub">Open to AI/ML roles, Python development, and research collaboration.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <a href="mailto:karthikeyanofficial46@gmail.com" class="contact-line magnetic">
+          <i class="fa-solid fa-envelope"></i>
+          <div><span>Email</span><strong>karthikeyanofficial46@gmail.com</strong></div>
+        </a>
+        <a href="tel:+918015767241" class="contact-line magnetic">
+          <i class="fa-solid fa-phone"></i>
+          <div><span>Phone</span><strong>+91 80157 67241</strong></div>
+        </a>
+        <div class="contact-line">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><span>Location</span><strong>Chidambaram, Tamil Nadu, India</strong></div>
+        </div>
+
+        <div class="about-socials contact-socials">
+          <a href="https://www.linkedin.com/in/karthikeyan-selvamani" target="_blank" class="social-btn magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/karthikeyan-aihub" target="_blank" class="social-btn magnetic" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://x.com/Karthi_AIML" target="_blank" class="social-btn magnetic" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form glass" id="contactForm" data-aos="fade-left">
+        <div class="form-row">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="Tell me about the opportunity or idea…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary ripple magnetic full">
+          <i class="fa-regular fa-paper-plane"></i><span>Send Message</span>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/ks-logo.png" alt="KS logo" class="brand-mark-img footer-logo">
+      <p>Building intelligent systems that leave the lab and work in the real world.</p>
+      <div class="about-socials">
+        <a href="https://www.linkedin.com/in/karthikeyan-selvamani" target="_blank" class="social-btn magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/karthikeyan-aihub" target="_blank" class="social-btn magnetic" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://x.com/Karthi_AIML" target="_blank" class="social-btn magnetic" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:karthikeyanofficial46@gmail.com" class="social-btn magnetic" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h5>Navigate</h5>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-terminal">
+      <pre>$ whoami
+&gt; Karthikeyan Selvamani
+&gt; role: AI/ML Engineer
+&gt; status: open_to_work ✓
+&gt; location: Tamil Nadu, IN</pre>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Karthikeyan Selvamani. Designed &amp; built with intent.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
